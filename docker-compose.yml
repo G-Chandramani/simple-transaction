@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  identity-service:
+    build:
+      context: .
+      dockerfile: src/Services/Identity/Dockerfile
+    ports:
+      - "5003:5000"
+
+  transaction-service:
+    build:
+      context: .
+      dockerfile: src/Services/Transaction/Dockerfile
+    ports:
+      - "5004:5000"
