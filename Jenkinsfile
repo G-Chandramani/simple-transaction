@@ -4,10 +4,8 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
                 git branch : 'main',
 			url: 'https://github.com/G-Chandramani/simple-transaction.git'
-            }
         }
 
         stage('Build Docker Images') {
