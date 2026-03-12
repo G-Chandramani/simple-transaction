@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/G-Chandramani/simple-transaction.git'
+                git branch : 'main',
+			url: 'https://github.com/G-Chandramani/simple-transaction.git'
             }
         }
 
