@@ -2,32 +2,10 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Clone Repository') {
-            steps {   
-		 git branch : 'main',
-			url: 'https://github.com/G-Chandramani/simple-transaction.git'
-		}
-	}
-
-        stage('Build Docker Images') {
+        stage('Hello World') {
             steps {
-                sh 'docker-compose build'
+                echo 'Hello, World!'
             }
         }
-
-	stage('Stop Old Containers') {
-	   steps {
-		sh 'docker-compose down'
-		}
-	}
-
-        stage('Deploy Containers') {
-            steps {
-                sh 'docker-compose up -d'
-            }
-        }
-
     }
 }
- 
